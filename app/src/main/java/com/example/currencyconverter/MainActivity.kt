@@ -58,33 +58,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-       /* btuConvert.setOnClickListener {
-           cal()
-        }*/
-            /*val snake =  Snackbar.make(textAmount, "Amount is Empty.", Snackbar.LENGTH_SHORT)
-                           snake.show()
-                           snake.setAction("ok"){
-
-                           }*/
-            //Toast.makeText(this, "Amount is Empty." ,Toast.LENGTH_SHORT).show()
-            /*if (from == "$" || from == "USD" && to == "£" || to == "EGP") {
-                result = amount.times(30.90)
-            } else if (from == "£" || from == "EGP" && to == "$" || to == "USD") {
-                result = amount.div(30.90)
-            }else{
-                Toast.makeText(this, "Check your Enters", Toast.LENGTH_SHORT).show()
-            }*/
-
-           // resultEdit.setText(result.toString())
-
-            /*if (from == "KWD" || from == "د.ك" && to == "£" || to == "EGP"){
-                result = amount / 100.51
-            }else if (from == "£" || from == "EGP" && to == "KWD" || to == "د.ك"){
-                result = amount.times(100.51)*/
-
-
-
-
     private fun cal(){
         if (textAmount.text.toString().isEmpty()){
             textAmount.setError("Amount is Empty.")
