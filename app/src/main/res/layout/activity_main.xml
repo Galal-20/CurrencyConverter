@@ -6,39 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/layoutL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/from"
+        android:background="#0D4C94">
+
+
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageApp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="20dp"
-        android:src="@drawable/coins"/>
+        android:layout_margin="15dp"
+        android:src="@drawable/icon"/>
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/currency_exchange"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/titleTv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageApp"
         android:layout_marginTop="50sp"
-        android:paddingStart="20dp"
         android:textSize="20sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/share"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toEndOf="@id/titleTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/share_icon"
+        tools:ignore="ContentDescription"
+        android:onClick="share"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/from"
-        app:layout_constraintTop_toBottomOf="@id/imageApp"
+        app:layout_constraintTop_toBottomOf="@id/layoutL"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/from"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="#0D4C94"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -73,7 +96,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/to"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="#0D4C94"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -106,7 +129,7 @@
         android:layout_marginStart="20sp"
         android:text="@string/amount"
         android:textSize="15sp"
-        android:textColor="@color/black"
+        android:textColor="#0D4C94"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -152,9 +175,9 @@
         app:layout_constraintTop_toBottomOf="@id/convert"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20sp"
-        android:text="@string/amount"
+        android:text="@string/result"
         android:textSize="15sp"
-        android:textColor="@color/red"
+        android:textColor="#0D4C94"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -171,11 +194,10 @@
         app:layout_constraintTop_toBottomOf="@+id/result">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/resultEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:id="@+id/resultEdit"
-            />
+            android:inputType="none" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
